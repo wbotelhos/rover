@@ -59,11 +59,13 @@ A class prepared to receive the input example of this test and print the given o
 
 # TODO
 
-- Finish some Ruby specs;
--- Kill all mutants;
--- Increase the coverage.
+- Avoid more than one robot into the same point;
 - Finish some JS specs;
--- Setup Istanbul for coverage;
+- Finish some Ruby specs;
+- Increase the coverage;
+- Kill all Mutants;
+- Separate JS Rover class into more than one object;
+- Setup Istanbul for coverage;
 - Configure Jenkins like:
 -- [http://wbotelhos.com/instalando-o-jenkins-no-tomcat](http://wbotelhos.com/instalando-o-jenkins-no-tomcat);
 -- [http://wbotelhos.com/acertando-o-warning-de-decode-do-jenkins](http://wbotelhos.com/acertando-o-warning-de-decode-do-jenkins);
@@ -81,6 +83,12 @@ Run mutant to know what we can do better on specs:
 
 ```bash
 bundle exec mutant -r ./config/environment --use rspec Brain
+```
+
+Run rubocop to check the code style:
+
+```bash
+rubocop
 ```
 
 Run app and see a visual usage:
