@@ -34,8 +34,8 @@ describe Leg do
         end
 
         it 'goes to next position' do
-          expect(robot.x).to    eq 0
-          expect(robot.y).to    eq 1
+          expect(robot.x).to eq 0
+          expect(robot.y).to eq 1
           expect(robot.side).to eq :north
         end
       end
@@ -73,8 +73,8 @@ describe Leg do
         end
 
         it 'goes to next position' do
-          expect(robot.x).to    eq 1
-          expect(robot.y).to    eq 0
+          expect(robot.x).to eq 1
+          expect(robot.y).to eq 0
           expect(robot.side).to eq :east
         end
       end
@@ -112,8 +112,8 @@ describe Leg do
         end
 
         it 'goes to next position' do
-          expect(robot.x).to    eq 1
-          expect(robot.y).to    eq 0
+          expect(robot.x).to eq 1
+          expect(robot.y).to eq 0
           expect(robot.side).to eq :south
         end
       end
@@ -150,8 +150,8 @@ describe Leg do
         before { robot.leg.move }
 
         it 'goes to next position' do
-          expect(robot.x).to    eq 0
-          expect(robot.y).to    eq 0
+          expect(robot.x).to eq 0
+          expect(robot.y).to eq 0
           expect(robot.side).to eq :west
         end
       end

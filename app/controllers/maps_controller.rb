@@ -1,11 +1,21 @@
 class MapsController < ApplicationController
   def explore
-    @robot         = Robot.new params[:x], params[:y], params[:side]
-    @robot.plateau = Plateau.new params[:plateau][:x], params[:plateau][:y]
+    @robot         = Robot.new(*robot_params)
+    @robot.plateau = Plateau.new(*plateau_params)
 
     @robot.commands params[:commands]
   end
 
   def index
+  end
+
+  private
+
+  def plateau_params
+    [params[:plateau][:x], params[:plateau][:y]]
+  end
+
+  def robot_params
+    [params[:x], params[:y], params[:side]]
   end
 end

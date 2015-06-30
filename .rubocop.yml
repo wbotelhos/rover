@@ -1,0 +1,20 @@
+require: rubocop-rspec
+
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Exclude:
+    - bin/*
+    - bower_components
+    - config/*
+    - db/*
+    - node_modules/**/*
+    - vendor/**/*
+
+  RunRailsCops: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/Encoding:
+  Enabled: false

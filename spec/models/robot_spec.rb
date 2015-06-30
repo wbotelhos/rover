@@ -188,7 +188,10 @@ describe Robot do
             end
 
             it 'is saved again' do
-              expect(robot.steps).to eq [{ y: 1, side: :north }, { x: 1, side: :east }]
+              expect(robot.steps).to eq [
+                { y: 1, side: :north },
+                { x: 1, side: :east }
+              ]
             end
           end
         end
@@ -211,12 +214,6 @@ describe Robot do
               expect(robot.steps[0][:side]).to eq :west
               expect(robot.steps[0][:error]).to match %(0x0.*west.*5x5)
             end
-
-            xit 'logs the error' do
-              expect(Rails.logger).to receive(:error).with %r(0x0.*west.*5x5)
-
-              robot.command 'm'
-            end
           end
         end
       end
@@ -235,12 +232,6 @@ describe Robot do
           expect(robot.steps[0][:y]).to eq 0
           expect(robot.steps[0][:side]).to eq :north
           expect(robot.steps[0][:error]).to match %(x)
-        end
-
-        xit 'logs the error' do
-          expect(Rails.logger).to receive(:error).with %r(x)
-
-          robot.command 'x'
         end
       end
     end

@@ -9,7 +9,7 @@ describe Errors::Plateau::OutOfLimit do
   end
 
   it 'builds the right message' do
-    expect(error.to_s).to match %r(1x1.*north.*2x2)
+    expect(error.to_s).to match(/1x1.*north.*2x2/)
   end
 
   it 'can reader robot' do

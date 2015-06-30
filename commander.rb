@@ -6,13 +6,13 @@ require_relative 'app/models/leg'
 require_relative 'app/models/plateau'
 require_relative 'app/models/robot'
 
-plateau     = Plateau.new *(gets.chomp.split ' ')
+plateau     = Plateau.new(*gets.chomp.split(' '))
 queue       = Queue.new
 robots_size = 2
 
 while queue.size < robots_size
   point         = gets.chomp
-  robot         = Robot.new *(point.split ' ')
+  robot         = Robot.new(*point.split(' '))
   robot.plateau = plateau
   steps         = gets.chomp
 
@@ -28,7 +28,7 @@ while queue.size > 0
   robot.commands data[:commands]
 
   if robot.steps.last.key? :error
-    p "#{robot.to_s}: #{robot.steps.last[:error]}"
+    p "#{robot}: #{robot.steps.last[:error]}"
   else
     p robot.to_s
   end

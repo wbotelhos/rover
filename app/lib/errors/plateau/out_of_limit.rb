@@ -9,7 +9,10 @@ module Errors
       end
 
       def to_s
-        "Cannot move from #{@robot.x}x#{@robot.y} to #{@side}. Plateau is #{@robot.plateau.x}x#{@robot.plateau.y}."
+        point   = "#{@robot.x}x#{@robot.y}"
+        plateau = "#{@robot.plateau.x}x#{@robot.plateau.y}"
+
+        "Cannot move from #{point} to #{@side}. Plateau is #{plateau}."
       end
     end
   end

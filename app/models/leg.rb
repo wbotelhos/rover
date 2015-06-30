@@ -10,24 +10,30 @@ class Leg
   private
 
   def north
-    raise Errors::Plateau::OutOfLimit.new(@robot, __method__) if @robot.brain.max_y?
+    max = @robot.brain.max_y?
 
-    step nil, 1, __method__
+    fail Errors::Plateau::OutOfLimit.new(@robot, __method__) if max
+
+    step nil, 1
   end
 
   def east
-    raise Errors::Plateau::OutOfLimit.new(@robot, __method__) if @robot.brain.max_x?
+    max = @robot.brain.max_x?
 
-    step 1, nil, __method__
+    fail Errors::Plateau::OutOfLimit.new(@robot, __method__) if max
+
+    step 1, nil
   end
 
   def south
-    raise Errors::Plateau::OutOfLimit.new(@robot, __method__) if @robot.brain.min_y?
+    min = @robot.brain.min_y?
 
-    step nil, -1, __method__
+    fail Errors::Plateau::OutOfLimit.new(@robot, __method__) if min
+
+    step nil, -1
   end
 
-  def step(x, y, side)
+  def step(x, y)
     @robot.x += x if x
     @robot.y += y if y
 
@@ -38,8 +44,10 @@ class Leg
   end
 
   def west
-    raise Errors::Plateau::OutOfLimit.new(@robot, __method__) if @robot.brain.min_x?
+    min = @robot.brain.min_x?
 
-    step -1, nil, __method__
+    fail Errors::Plateau::OutOfLimit.new(@robot, __method__) if min
+
+    step(-1, nil)
   end
 end

@@ -50,7 +50,9 @@ describe Gear do
 
     context 'when other letter then "l" or "r"' do
       it 'turns to right' do
-        expect { robot.gear.turn_to 'x' }.to raise_error Errors::Gear::UnknowDirection
+        error = Errors::Gear::UnknowDirection
+
+        expect { robot.gear.turn_to 'x' }.to raise_error error
       end
     end
   end

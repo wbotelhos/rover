@@ -7,7 +7,7 @@ class Gear
     return left  if direction.downcase == 'l'
     return right if direction.downcase == 'r'
 
-    raise Errors::Gear::UnknowDirection.new direction
+    fail Errors::Gear::UnknowDirection.new direction
   end
 
   private

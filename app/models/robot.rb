@@ -24,13 +24,13 @@ class Robot
   # TODO: spec
   def commands(names)
     names.scan(/./).each do |name|
-      self.command name
+      command name
     end
   end
 
   # TODO: spec
   def to_s
-    "#{self.x} #{self.y} #{self.side.to_s.chr.upcase}"
+    "#{x} #{y} #{side.to_s.chr.upcase}"
   end
 
   private
@@ -42,7 +42,7 @@ class Robot
   end
 
   def register_error_step(error)
-    @steps << { error: error.to_s, side: self.side, x: self.x, y: self.y }
+    @steps << { error: error.to_s, side: side, x: x, y: y }
   end
 
   # TODO: dirty
