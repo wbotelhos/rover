@@ -41,7 +41,7 @@ group :test do
   gem 'rack_session_access'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers'    , require: false
   gem 'simplecov'           , require: false
   gem 'simplecov-rcov'      , require: false
 end
