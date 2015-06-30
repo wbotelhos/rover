@@ -97,11 +97,15 @@ Run app and see a visual usage:
 rails s
 ```
 
+And then access [http://localhost:3000](http://localhost:3000)
+
 Run a console version:
 
 ```bash
 ruby commander.rb
 ```
+
+Inside the 'commander.rb' class you can choose how many robots you will deploy changing the `robot_size`.
 
 Enter the input:
 
@@ -121,3 +125,28 @@ And see the output:
 ```
 
 You choose how many robots you will deploy and the commands are queued to be processed later one after another.
+
+# Deploy
+
+I used Capistrano, you can see the tasks at `config/deploy.rb`
+
+# Server Stack
+
+- Ruby 2.2.2
+- Rails 4.2.3
+- Nginx 1.8.0
+- Unicorn 4.9.0
+- Upstart
+
+# Server
+
+Amazon EC2 on IP [54.94.222.207](54.94.222.207) or just as a facilitator [http://estacione.com](http://estacione.com)
+
+## Credentials
+
+user: rover
+password: rover
+
+# Repository
+
+It is keeped on Github on a private repository [https://github.com/wbotelhos/rover](https://github.com/wbotelhos/rover)
