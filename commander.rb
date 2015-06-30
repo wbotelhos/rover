@@ -29,5 +29,9 @@ while queue.size > 0
 
   robot.commands data[:commands]
 
-  p robot.to_s
+  if robot.steps.last.key? :error
+    p "#{robot.to_s}: #{robot.steps.last[:error]}"
+  else
+    p robot.to_s
+  end
 end
