@@ -6,11 +6,11 @@ require_relative 'app/models/leg'
 require_relative 'app/models/plateau'
 require_relative 'app/models/robot'
 
-plateau     = Plateau.new(*gets.chomp.split(' '))
-queue       = Queue.new
-robots_size = 2
+plateau          = Plateau.new(*gets.chomp.split(' '))
+queue            = Queue.new
+number_of_robots = 2
 
-while queue.size < robots_size
+while queue.size < number_of_robots
   point         = gets.chomp
   robot         = Robot.new(*point.split(' '))
   robot.plateau = plateau
