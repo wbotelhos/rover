@@ -1,5 +1,3 @@
-require 'logging'
-
 require_relative 'app/lib/errors/gear/unknow_direction'
 require_relative 'app/lib/errors/plateau/out_of_limit'
 require_relative 'app/models/brain'

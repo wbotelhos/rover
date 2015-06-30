@@ -42,8 +42,6 @@ class Robot
   end
 
   def register_error_step(error)
-    # Rails.logger.error error.to_s
-
     @steps << { error: error.to_s, side: self.side, x: self.x, y: self.y }
   end
 

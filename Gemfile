@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'compass-rails'
 gem 'jquery-rails'
-gem 'logging-rails', require: 'logging/rails'
 gem 'rails'
 gem 'rake'
 gem 'sass-rails'
