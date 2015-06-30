@@ -1,0 +1,15 @@
+pt:
+  robot:
+    area: Área
+
+    buttons:
+      explore: Explorar
+
+    commands: Comandos
+    interval: Intervalo
+    name: Nome
+    position: Posição
+    side: Lado
+    speed: Velocidade
+    x: Posição X
+    y: Posição Y

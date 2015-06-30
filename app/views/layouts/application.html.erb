@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="<%= I18n.locale %>">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Rover Robots">
+  <meta name="keywords" content="rover, robots, ninja">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="google" content="notranslate">
+
+  <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico" />
+
+  <title><%= t 'app.name' %></title>
+
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag 'application' %>
+  <%= javascript_include_tag 'application' %>
+</head>
+<body>
+  <div class="content">
+    <%= render 'shared/menu' %>
+
+    <%= yield %>
+  </div>
+</body>
+</html>

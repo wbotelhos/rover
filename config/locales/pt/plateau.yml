@@ -1,0 +1,7 @@
+pt:
+  plateau:
+    sides:
+      east: Leste
+      north: Norte
+      south: Sul
+      west: Oeste

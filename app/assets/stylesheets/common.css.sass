@@ -1,0 +1,58 @@
+@import 'compass/css3/box-sizing'
+@import 'compass/css3/border-radius'
+
+*, *:before, *:after
+  +box-sizing(border-box !important)
+
+html, body
+  height: 100%
+  width: 100%
+
+body
+  -webkit-backface-visibility: none
+  color: #333
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-size: 10px
+  line-height: 1.4
+  margin: 0
+  overflow-x: hidden
+
+label
+  color: #4a535e
+  display: inline-block
+  font-size: 1.4em
+  font-weight: normal
+  margin-bottom: 4px
+  margin-left: 2px
+
+.input
+  +border-radius(3px)
+  border: 1px solid #ccc
+  color: #555
+  font-size: 1.3em
+  height: 44px
+  padding: 11px
+  width: 100%
+
+  &:focus
+    border-color: #999
+
+.placeholder
+  margin-top: 15px
+
+.right
+  float: right
+
+
+select
+  +border-radius(3px)
+  border: 1px solid #ccc
+  color: #333
+  display: inline-block
+  font-size: 1.3em
+  height: 44px
+  padding: 11px
+  width: 100%
+
+  &:focus
+    border-color: #999

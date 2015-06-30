@@ -1,0 +1,32 @@
+@import 'compass/css3/border-radius'
+@import 'mixins'
+
+aside
+  background-color: #fff
+  border-right: 1px solid #e7e7e7
+  float: left
+  padding: 10px
+  width: 250px
+
+  button
+    margin-bottom: 20px
+
+  .area
+    input
+      +calc('width', '50% - 10px - 2px - 2px')
+      display: inline-block
+
+    span
+      font-size: 2em
+      margin-left: 5px
+      margin-right: 5px
+
+  .axis
+    input
+      +calc('width', '50% - 10px - 2px - 2px')
+      display: inline-block
+
+    span
+      font-size: 2em
+      margin-left: 5px
+      margin-right: 5px

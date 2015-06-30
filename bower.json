@@ -1,0 +1,21 @@
+{
+  "authors": ["Washington Botelho <wbotelhos@gmail.com>"],
+  "description": "rover",
+  "homepage": "https://rover.com",
+  "keywords": ["rover", "robot"],
+  "name": "rover",
+  "private": true,
+
+  "dependencies" : {
+    "jquery": ""
+  },
+
+  "ignore": [
+    "**/.*",
+    "app/assets/javascripts/vendor",
+    "app/assets/stylesheets/vendor",
+    "bower_components",
+    "node_modules",
+    "spec"
+  ]
+}

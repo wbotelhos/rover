@@ -1,0 +1,50 @@
+<aside role="complementary">
+  <%= form_tag explore_path, remote: true do %>
+    <div class="placeholder">
+      <%= label_tag t('robot.name') %>
+      <%= text_field_tag :name, :C3P0, placeholder: t('robot.name'), autofocus: true, class: :input %>
+    </div>
+
+    <div class="placeholder">
+      <%= label_tag t('robot.speed') %>
+      <%= text_field_tag :speed, 200, placeholder: t('robot.speed'), autofocus: true, class: :input %>
+    </div>
+
+    <div class="placeholder">
+      <%= label_tag t('robot.interval') %>
+      <%= text_field_tag :interval, 400, placeholder: t('robot.interval'), autofocus: true, class: :input %>
+    </div>
+
+    <div class="placeholder">
+      <%= label_tag t('robot.position') %>
+
+      <div class="axis">
+        <%= number_field_tag :x, 3, placeholder: t('robot.x'), class: :input %>
+        <span>x</span>
+        <%= number_field_tag :y, 3, placeholder: t('robot.y'), class: :input %>
+      </div>
+    </div>
+
+    <div class="placeholder">
+      <%= select_tag :side, options_for_select(sides_select, :east) %>
+    </div>
+
+    <div class="placeholder">
+      <%= label_tag t('robot.area') %>
+
+      <div class="area">
+        <%= number_field_tag 'plateau[x]', 5, placeholder: t('robot.x'), class: :input %>
+        <span>x</span>
+        <%= number_field_tag 'plateau[y]', 5, placeholder: t('robot.y'), class: :input %>
+      </div>
+    </div>
+
+    <div class="placeholder">
+      <%= label_tag t('robot.commands') %>
+
+      <%= text_field_tag :commands, :mmrmmrmrrm, placeholder: t('robot.commands'), class: :input %>
+    </div>
+
+    <%= button_tag t('robot.buttons.explore'), class: 'button green right' %>
+  <% end %>
+</aside>

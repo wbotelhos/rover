@@ -1,0 +1,24 @@
+@import 'compass/css3/border-radius'
+
+.button
+  +border-radius(3px)
+  border: none
+  color: #fff
+  cursor: pointer
+  display: inline-block
+  font-size: 1.4em
+  margin-top: 10px
+  min-width: 100px
+  padding-bottom: 14px
+  padding-top: 14px
+  text-align: center
+  white-space: normal
+
+.green
+  background-color: #5cb85c
+
+  &:focus, &:hover
+    background-color: #4cae4c
+
+  &:active
+    background-color: #80c780

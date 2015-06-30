@@ -1,0 +1,13 @@
+var
+  params = <%= raw params.to_json %>,
+  areaX = params.plateau.x,
+  areaY = params.plateau.y,
+  name  = params.name,
+  side  = params.side,
+  steps = <%= raw @robot.steps.to_json %>,
+  x     = params.x,
+  y     = params.y;
+
+var rover = new Rover($('#map'), x, y, side, areaX, areaY, steps);
+
+rover.create().explore();

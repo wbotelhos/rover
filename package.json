@@ -1,0 +1,21 @@
+{
+  "name": "rover",
+  "version": "0.1.0",
+  "private": true,
+
+  "devDependencies": {
+    "bower-files": "",
+    "gulp": "",
+    "gulp-eslint": "",
+    "gulp-install": "",
+    "karma": "0.12",
+    "karma-chrome-launcher": "0.1",
+    "karma-firefox-launcher": "0.1",
+    "karma-jasmine": "0.2",
+    "karma-phantomjs-launcher": "0.1"
+  },
+
+  "scripts": {
+    "test": "node_modules/karma/bin/karma start spec/karma.conf.js"
+  }
+}
