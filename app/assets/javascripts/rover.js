@@ -154,6 +154,9 @@ Rover.prototype.explore = function() {
     step      = this.steps[stepIndex],
     that      = this;
 
+  this.walk();
+  this.appear(step);
+
   var movement = setInterval(function() {
     if (stepIndex === that.steps.length) {
       that.show(that.x + ' ' + that.y + ' ' + that.side);
