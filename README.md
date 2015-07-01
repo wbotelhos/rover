@@ -73,10 +73,16 @@ A class prepared to receive the input example of this test and print the given o
 
 # What we can do?
 
-Run specs and check coverage too:
+Run Ruby specs and check coverage too:
 
 ```bash
 rspec spec
+```
+
+Run JS specs with ESLint:
+
+```bash
+gulp
 ```
 
 Run mutant to know what we can do better on specs:
