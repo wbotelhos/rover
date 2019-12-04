@@ -3,7 +3,7 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'jquery-rails'
-gem 'rails', '~> 4'
+gem 'rails', '~> 5'
 gem 'rake'
 gem 'sass-rails'
 gem 'sprockets', '~> 3'
