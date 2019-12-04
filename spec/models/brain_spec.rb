@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe Brain do
@@ -18,7 +20,7 @@ describe Brain do
       let(:robot) { Robot.new 0, 0, :west }
 
       it 'returns false' do
-        expect(robot.brain).to_not be_north
+        expect(robot.brain).not_to be_north
       end
     end
   end
@@ -40,7 +42,7 @@ describe Brain do
       let(:robot) { Robot.new }
 
       it 'returns false' do
-        expect(robot.brain).to_not be_east
+        expect(robot.brain).not_to be_east
       end
     end
   end
@@ -62,7 +64,7 @@ describe Brain do
       let(:robot) { Robot.new }
 
       it 'returns false' do
-        expect(robot.brain).to_not be_south
+        expect(robot.brain).not_to be_south
       end
     end
   end
@@ -84,7 +86,7 @@ describe Brain do
       let(:robot) { Robot.new }
 
       it 'returns false' do
-        expect(robot.brain).to_not be_west
+        expect(robot.brain).not_to be_west
       end
     end
   end
@@ -110,7 +112,7 @@ describe Brain do
       end
 
       it 'returns false' do
-        expect(robot.brain).to_not be_max_x
+        expect(robot.brain).not_to be_max_x
       end
     end
   end
@@ -136,7 +138,7 @@ describe Brain do
       end
 
       it 'returns false' do
-        expect(robot.brain).to_not be_max_y
+        expect(robot.brain).not_to be_max_y
       end
     end
   end
@@ -162,7 +164,7 @@ describe Brain do
       end
 
       it 'returns false' do
-        expect(robot.brain).to_not be_min_x
+        expect(robot.brain).not_to be_min_x
       end
     end
   end
@@ -188,7 +190,7 @@ describe Brain do
       end
 
       it 'returns false' do
-        expect(robot.brain).to_not be_min_y
+        expect(robot.brain).not_to be_min_y
       end
     end
   end

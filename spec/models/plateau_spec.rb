@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe Plateau do
@@ -25,7 +27,7 @@ describe Plateau do
   end
 
   it 'has the right sides' do
-    expect(described_class.new.sides).to eq [:north, :east, :south, :west]
+    expect(described_class.new.sides).to eq %i[north east south west]
   end
 
   it 'expose x axis' do

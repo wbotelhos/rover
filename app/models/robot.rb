@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Robot
   attr_accessor :plateau, :side, :x, :y
   attr_reader :brain
@@ -16,7 +18,7 @@ class Robot
   end
 
   def command(name)
-    return move if name.downcase == 'm'
+    return move if name.casecmp('m').zero?
 
     turn_to name
   end
@@ -37,8 +39,8 @@ class Robot
 
   def move
     @steps << leg.move
-  rescue Errors::Plateau::OutOfLimit => error
-    register_error_step error
+  rescue Errors::Plateau::OutOfLimit => e
+    register_error_step e
   end
 
   def register_error_step(error)
@@ -55,13 +57,13 @@ class Robot
       s:     :south,
       south: :south,
       w:     :west,
-      west:  :west
+      west:  :west,
     }[letter.downcase.to_sym]
   end
 
   def turn_to(direction)
     @steps << @gear.turn_to(direction)
-  rescue Errors::Gear::UnknowDirection => error
-    register_error_step error
+  rescue Errors::Gear::UnknowDirection => e
+    register_error_step e
   end
 end
