@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Plateau do
+RSpec.describe Plateau do
   describe ':area' do
     it 'has 5 x 5 as default' do
       plateau = described_class.new

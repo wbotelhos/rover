@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Gear do
+RSpec.describe Gear do
   let(:robot) { Robot.new }
 
   before do

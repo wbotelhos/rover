@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Brain do
+RSpec.describe Brain do
   describe '.north?' do
     context 'when robot side is north' do
       let(:robot) { Robot.new }

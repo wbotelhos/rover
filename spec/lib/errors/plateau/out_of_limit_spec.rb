@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Errors::Plateau::OutOfLimit do
+RSpec.describe Errors::Plateau::OutOfLimit do
   let(:robot) { Robot.new 1, 1 }
   let(:error) { described_class.new robot, :north }
 

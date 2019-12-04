@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe PlateauHelper do
+RSpec.describe PlateauHelper do
   describe '#sides_select' do
     it 'builds a select option with name and id ordered by name' do
       expect(helper.sides_select).to eq [

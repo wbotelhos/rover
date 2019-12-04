@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Robot do
+RSpec.describe Robot do
   let(:robot) { described_class.new }
 
   before do
