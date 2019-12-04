@@ -8,7 +8,6 @@ gem 'rails', '~> 5'
 gem 'rake'
 gem 'sass-rails'
 gem 'sprockets', '~> 3'
-gem 'sqlite3'
 gem 'uglifier'
 
 group :development do
