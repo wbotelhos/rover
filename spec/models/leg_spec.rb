@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-describe Leg do
+RSpec.describe Leg do
   describe '.move' do
     describe 'return' do
       let(:robot) { Robot.new }

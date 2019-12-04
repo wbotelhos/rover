@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 module PlateauHelper
   def sides_select
-    [:north, :east, :south, :west].map do |side|
+    %i[north east south west].map do |side|
       [t("plateau.sides.#{side}"), side]
     end
   end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Leg
   def initialize(robot)
     @robot = robot
@@ -12,7 +14,7 @@ class Leg
   def north
     max = @robot.brain.max_y?
 
-    fail Errors::Plateau::OutOfLimit.new(@robot, __method__) if max
+    raise Errors::Plateau::OutOfLimit.new(@robot, __method__) if max
 
     step nil, 1
   end
@@ -20,7 +22,7 @@ class Leg
   def east
     max = @robot.brain.max_x?
 
-    fail Errors::Plateau::OutOfLimit.new(@robot, __method__) if max
+    raise Errors::Plateau::OutOfLimit.new(@robot, __method__) if max
 
     step 1, nil
   end
@@ -28,7 +30,7 @@ class Leg
   def south
     min = @robot.brain.min_y?
 
-    fail Errors::Plateau::OutOfLimit.new(@robot, __method__) if min
+    raise Errors::Plateau::OutOfLimit.new(@robot, __method__) if min
 
     step nil, -1
   end
@@ -46,7 +48,7 @@ class Leg
   def west
     min = @robot.brain.min_x?
 
-    fail Errors::Plateau::OutOfLimit.new(@robot, __method__) if min
+    raise Errors::Plateau::OutOfLimit.new(@robot, __method__) if min
 
     step(-1, nil)
   end

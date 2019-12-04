@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'app/lib/errors/gear/unknow_direction'
 require_relative 'app/lib/errors/plateau/out_of_limit'
 require_relative 'app/models/brain'
@@ -21,7 +23,7 @@ end
 
 puts
 
-while queue.size > 0
+until queue.empty?
   data  = queue.pop
   robot = data[:robot]
 

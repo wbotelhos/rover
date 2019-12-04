@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Plateau
   attr_reader :x, :y
 
@@ -7,6 +9,6 @@ class Plateau
   end
 
   def sides
-    @sides ||= [:north, :east, :south, :west]
+    @sides ||= %i[north east south west]
   end
 end

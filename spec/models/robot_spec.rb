@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-describe Robot do
+RSpec.describe Robot do
   let(:robot) { described_class.new }
 
   before do
@@ -12,7 +14,7 @@ describe Robot do
       let(:robot) { described_class.new '1', '1' }
 
       it 'becomes integer' do
-        expect(robot.x.class).to eq Fixnum
+        expect(robot.x.class).to eq Integer
       end
     end
   end
@@ -22,7 +24,7 @@ describe Robot do
       let(:robot) { described_class.new '1', '1' }
 
       it 'becomes integer' do
-        expect(robot.y.class).to eq Fixnum
+        expect(robot.y.class).to eq Integer
       end
     end
   end
@@ -164,12 +166,12 @@ describe Robot do
       end
 
       it 'returns the axis and redundant side for better view manipulation' do
-        expect(robot.command 'm').to eq [{ y: 1, side: :north }]
+        expect(robot.command('m')).to eq [{ y: 1, side: :north }]
       end
 
       context 'with uppercase' do
         it 'returns the axis and redundant side for better view manipulation' do
-          expect(robot.command 'M').to eq [{ y: 1, side: :north }]
+          expect(robot.command('M')).to eq [{ y: 1, side: :north }]
         end
       end
 
@@ -190,7 +192,7 @@ describe Robot do
             it 'is saved again' do
               expect(robot.steps).to eq [
                 { y: 1, side: :north },
-                { x: 1, side: :east }
+                { x: 1, side: :east },
               ]
             end
           end
@@ -202,7 +204,7 @@ describe Robot do
           end
 
           it 'holds the error' do
-            expect { robot.command 'm' }.to_not raise_error
+            expect { robot.command 'm' }.not_to raise_error
           end
 
           describe ':steps' do
@@ -221,7 +223,7 @@ describe Robot do
 
     context 'whe robot does not no the side to turn' do
       it 'holds the error' do
-        expect { robot.command 'x' }.to_not raise_error
+        expect { robot.command 'x' }.not_to raise_error
       end
 
       describe ':steps' do
@@ -253,7 +255,7 @@ describe Robot do
           { side: :south },
           { side: :south, y: -1 },
           { side: :west },
-          { side: :west, x: -1 }
+          { side: :west, x: -1 },
         ]
       end
     end

@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-describe Plateau do
+RSpec.describe Plateau do
   describe ':area' do
     it 'has 5 x 5 as default' do
       plateau = described_class.new
@@ -25,7 +27,7 @@ describe Plateau do
   end
 
   it 'has the right sides' do
-    expect(described_class.new.sides).to eq [:north, :east, :south, :west]
+    expect(described_class.new.sides).to eq %i[north east south west]
   end
 
   it 'expose x axis' do

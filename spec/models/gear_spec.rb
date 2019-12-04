@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-describe Gear do
+RSpec.describe Gear do
   let(:robot) { Robot.new }
 
   before do
@@ -16,7 +18,7 @@ describe Gear do
       end
 
       it 'returns the side' do
-        expect(robot.gear.turn_to 'l').to eq(side: :west)
+        expect(robot.gear.turn_to('l')).to eq(side: :west)
       end
     end
 
@@ -36,7 +38,7 @@ describe Gear do
       end
 
       it 'returns the side' do
-        expect(robot.gear.turn_to 'r').to eq(side: :east)
+        expect(robot.gear.turn_to('r')).to eq(side: :east)
       end
     end
 

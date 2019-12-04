@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MapsController < ApplicationController
   def explore
     @robot         = Robot.new(*robot_params)
@@ -6,8 +8,7 @@ class MapsController < ApplicationController
     @robot.commands params[:commands]
   end
 
-  def index
-  end
+  def index; end
 
   private
 

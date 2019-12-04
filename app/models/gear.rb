@@ -1,23 +1,25 @@
+# frozen_string_literal: true
+
 class Gear
   def initialize(robot)
     @robot = robot
   end
 
   def turn_to(direction)
-    return left  if direction.downcase == 'l'
-    return right if direction.downcase == 'r'
+    return left  if direction.casecmp('l').zero?
+    return right if direction.casecmp('r').zero?
 
-    fail Errors::Gear::UnknowDirection.new direction
+    raise Errors::Gear::UnknowDirection, direction
   end
 
   private
 
   def left
-    step sides[(side_index == 0) ? sides.size - 1 : side_index - 1]
+    step sides[side_index == 0 ? sides.size - 1 : side_index - 1]
   end
 
   def right
-    step sides[(side_index < sides.size - 1) ? side_index + 1 : 0]
+    step sides[side_index < sides.size - 1 ? side_index + 1 : 0]
   end
 
   def sides

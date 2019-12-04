@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Brain
   def initialize(robot)
     @robot = robot

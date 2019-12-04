@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-describe Errors::Gear::UnknowDirection do
+RSpec.describe Errors::Gear::UnknowDirection do
   let(:error) { described_class.new 'direction' }
 
   it 'builds the right message' do
