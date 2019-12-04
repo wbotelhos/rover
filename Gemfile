@@ -3,6 +3,7 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'jquery-rails'
+gem 'listen'
 gem 'rails', '~> 5'
 gem 'rake'
 gem 'sass-rails'
