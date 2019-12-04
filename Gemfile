@@ -1,4 +1,6 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -10,6 +12,8 @@ gem 'sassc-rails'
 gem 'sprockets', '~> 3'
 
 group :development do
+  gem 'rubocop-performance'
+  gem 'rubocop-rails'
   gem 'rubocop-rspec', require: false
 end
 

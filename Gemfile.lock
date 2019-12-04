@@ -163,6 +163,11 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 1.7)
+    rubocop-performance (1.5.1)
+      rubocop (>= 0.71.0)
+    rubocop-rails (2.4.0)
+      rack (>= 1.1)
+      rubocop (>= 0.72.0)
     rubocop-rspec (1.37.0)
       rubocop (>= 0.68.1)
     ruby-progressbar (1.10.1)
@@ -214,6 +219,8 @@ DEPENDENCIES
   rails
   rake
   rspec-rails
+  rubocop-performance
+  rubocop-rails
   rubocop-rspec
   sassc-rails
   shoulda-matchers
