@@ -1,26 +1,21 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'compass-rails'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
 gem 'jquery-rails'
-gem 'rails'
+gem 'rails', '~> 4'
 gem 'rake'
 gem 'sass-rails'
+gem 'sprockets', '~> 3'
 gem 'sqlite3'
 gem 'uglifier'
 
 group :development do
-  gem 'capistrano-bundler', require: false
-  gem 'capistrano-rails', require: false
-  gem 'rubocop', require: false
-  gem 'rubocop-checkstyle_formatter', require: false
   gem 'rubocop-rspec', require: false
 end
 
 group :development, :test do
-  gem 'awesome_print'
-  gem 'guard-rspec'
   gem 'pry-byebug'
-  gem 'spring-commands-rspec'
 end
 
 group :production do
@@ -29,7 +24,6 @@ group :production do
 end
 
 group :test do
-  gem 'mutant-rspec'
   gem 'rspec-rails'
   gem 'shoulda-matchers', require: false
   gem 'simplecov', require: false
