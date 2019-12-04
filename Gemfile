@@ -4,11 +4,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'jquery-rails'
 gem 'listen'
-gem 'rails', '~> 5'
+gem 'rails'
 gem 'rake'
-gem 'sass-rails'
+gem 'sassc-rails'
 gem 'sprockets', '~> 3'
-gem 'uglifier'
 
 group :development do
   gem 'rubocop-rspec', require: false
@@ -20,7 +19,6 @@ end
 
 group :production do
   gem 'unicorn'
-  gem 'yui-compressor'
 end
 
 group :test do
